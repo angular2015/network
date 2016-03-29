@@ -1,0 +1,57 @@
+<div ng-include="'main/menu/templates/menu.html'"></div>
+
+
+<md-content layout-padding>
+    <h1 class="header">ARVM <small class="caption">A real value money</small> </h1>
+    
+    <form name="colorForm" class="margin-center form-common" novalidate ng-submit="loginSubmit(user)">
+        <md-input-container>
+            <label>Code</label>
+            <input name="favoriteColor" ng-model="user.code" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>User Name</label>
+            <input name="favoriteColor" ng-model="user.username" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Password</label>
+            <input name="favoriteColor" type="password" ng-model="user.password" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Confirm Password</label>
+            <input name="favoriteColor" type="password" ng-model="user.cpassword" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Mobile</label>
+            <input name="favoriteColor" ng-model="user.mobile" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <md-input-container>
+            <label>Email</label>
+            <input name="favoriteColor" ng-model="user.email" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+      
+
+        <md-button class="md-raised btn-blue btn-submit" type="submit"  ng-disabled="colorForm.$invalid"> Register </md-button>
+        <md-button class="md-raised text-grey" ui-sref="app.login"> Login</md-button>
+        <br>
+
+    </form>
+</md-content>
