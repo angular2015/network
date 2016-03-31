@@ -8,29 +8,53 @@ and open the template in the editor.
     <head>
         <title>A real value money</title>
         <meta charset="UTF-8">
-        
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="lib/angular-material/angular-material.min.css" rel="stylesheet" type="text/css"/>
+        <style>
+            * {
+                font-family: "Trebuchet MS", Helvetica, sans-serif;
+                font-size: 13px;
+            }
+
+            #explorer{
+                width: 1000px;
+                height: 300px;
+            }
+        </style>
+        <!--<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>-->
+        <link href="lib/explorer/Explorer.css" rel="stylesheet" type="text/css"/>
+
         <script src="lib/angular.min.js" type="text/javascript"></script>
 
+        <!--<script src="http://www.google.com/jsapi?ext.js"></script>-->
+        <script src="lib/chart/d3.js" type="text/javascript"></script>
+
+        <!--<script src="lib/chart/angular-chartjs.js" type="text/javascript"></script>-->
+
         <script src="lib/angular-ui-router.min.js" type="text/javascript"></script>
+        
+
+
 
         <script src="lib/angular-animate.min.js" type="text/javascript"></script>
         <script src="lib/angular-aria.min.js" type="text/javascript"></script>
-        
+
         <script src="lib/angular-material/angular-material.min.js" type="text/javascript"></script>
 
         <link href="main/abstract/css/style.css" rel="stylesheet" type="text/css"/>
         <script src="main/abstract/js/app.js" type="text/javascript"></script>
         <script src="main/abstract/js/appCtrl.js" type="text/javascript"></script>
 
+        <script src="lib/chart/explorer.service.js" type="text/javascript"></script>
+        <script src="main/common_services/servise.js" type="text/javascript"></script>
         <script src="main/menu/js/menuCtrl.js" type="text/javascript"></script>
-        
+
         <script src="main/home/js/homeCtrl.js" type="text/javascript"></script>
-        
+
         <link href="main/login/css/loginCss.css" rel="stylesheet" type="text/css"/>
         <script src="main/login/js/loginCtrl.js" type="text/javascript"></script>
-        
+
         <script src="main/register/js/RegisterCtrl.js" type="text/javascript"></script>
     </head>
     <body ng-app="networking">
