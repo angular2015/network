@@ -1,6 +1,7 @@
 (function () {
     'use strict';
-    angular.module('networking.login').controller('RegisterCtrl', ['$scope', function ($scope) {
+    angular.module('networking.login').controller('RegisterCtrl', ['$scope', '$mdToast',
+        function ($scope, $mdToast) {
             $scope.user = {
                 username: '',
                 password: '',
@@ -9,7 +10,7 @@
                 email: ''
             };
             $scope.loginSubmit = function (user) {
-                console.log(user);
+                $mdToast.show($mdToast.simple().textContent(user));
             };
         }]);
 })();
