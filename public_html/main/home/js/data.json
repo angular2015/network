@@ -1,132 +1,61 @@
-{
-    "user_id": "1",
-    "display_name": "vaibhav",
-    "name": "vaibhav srivastava",
-    "tree_level": "1",
-    "viewinfo": {
-        "color": "#26334b",
-        "label": "vaibhav",
-        "hint": "vaibhav srivastava",
-        "shape": "square",
-        "actions": [
+[{
+        "user_id": "1",
+        "display_name": "vaibhav",
+        "user_name": "vaibhav srivastava",
+        "tree_level": "1",
+        "objectives": [
             {
-                "id": "Add Member",
-                "name": "Add Member"
+                "user_id": "2",
+                "display_name": "sid",
+                "user_name": "siddharth srivastava",
+                "tree_level": "2",
+                "objectives": [
+                    {
+                        "user_id": "4",
+                        "display_name": "sheetal",
+                        "user_name": "sheetal srivastava",
+                        "tree_level": "2"
+
+                    },
+                    {
+                        "user_id": "5",
+                        "display_name": "abhishek",
+                        "user_name": "abhishek dwivedi",
+                        "tree_level": "3"
+
+                    }
+                ]
+            },
+            {
+                "user_id": "3",
+                "display_name": "shashank",
+                "user_name": "shashank dixit",
+                "tree_level": "2",
+                "objectives": [
+                    {
+                        "user_id": "6",
+                        "display_name": "priyam",
+                        "user_name": "priyam gupta",
+                        "tree_level": "3",
+                        "objectives": [
+                            {
+                                "user_id": "8",
+                                "display_name": "vibhu",
+                                "user_name": "vibhu srivastava",
+                                "tree_level": "4"
+
+                            }
+                        ]
+
+                    },
+                    {
+                        "user_id": "7",
+                        "display_name": "kripal",
+                        "user_name": "kripal singh",
+                        "tree_level": "3"
+
+                    }
+                ]
             }
         ]
-    },
-    "objectives": [
-        {
-            "user_id": "2",
-            "display_name": "sid",
-            "name": "siddharth srivastava",
-            "tree_level": "2",
-            "viewinfo": {
-                "color": "#26334b",
-                "label": "sid",
-                "hint": "siddharth srivastava",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add Member",
-                        "name": "Add Member"
-                    }
-                ]
-            },
-               "objectives": [
-        {
-            "user_id": "2",
-            "display_name": "sid",
-            "name": "siddharth srivastava",
-            "tree_level": "2",
-            "viewinfo": {
-                "color": "#26334b",
-                "label": "sid",
-                "hint": "siddharth srivastava",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add Member",
-                        "name": "Add Member"
-                    }
-                ]
-            }
-        },
-        {
-            "user_id": "3",
-            "display_name": "shashank",
-            "name": "shashank dixit",
-            "tree_level": "2",
-            "viewinfo": {
-                "color": "#26334b",
-                "label": "shashank",
-                "hint": "shashank dixit",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add Member",
-                        "name": "Add Member"
-                    }
-                ]
-            }
-        }
-    ]
-        },
-        {
-            "user_id": "3",
-            "display_name": "shashank",
-            "name": "shashank dixit",
-            "tree_level": "2",
-            "viewinfo": {
-                "color": "#26334b",
-                "label": "shashank",
-                "hint": "shashank dixit",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add Member",
-                        "name": "Add Member"
-                    }
-                ]
-            },
-               "objectives": [
-        {
-            "user_id": "2",
-            "display_name": "sid",
-            "name": "siddharth srivastava",
-            "tree_level": "2",
-            "viewinfo": {
-                "color": "#26334b",
-                "label": "sid",
-                "hint": "siddharth srivastava",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add Member",
-                        "name": "Add Member"
-                    }
-                ]
-            }
-        },
-        {
-            "user_id": "3",
-            "display_name": "shashank",
-            "name": "shashank dixit",
-            "tree_level": "2",
-            "viewinfo": {
-                "color": "#26334b",
-                "label": "shashank",
-                "hint": "shashank dixit",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add Member",
-                        "name": "Add Member"
-                    }
-                ]
-            }
-        }
-    ]
-        }
-    ]
-}
+    }]

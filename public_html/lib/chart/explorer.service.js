@@ -3,7 +3,7 @@
     angular.module('networking')
             .factory('Explorer', exploreCtrl)
             .factory('exploreGraph', data);
-    function data($http, Explorer) {
+    function data($http, Explorer,$rootScope) {
         var data = {};
 
         data.data = function (id) {
@@ -20,7 +20,9 @@
                     lightbulb: {fill: 'green'},
                 },
                 actionCallback: function (action, tree, node) {
-                    console.log('[Callback] Action "' + action + '" performed: ', 'Explorer=', tree, 'Node=', node);
+                    console.log(action);
+                    $rootScope.$emit('action',action);
+//                    console.log('[Callback] Action "' + action + '" performed: ', 'Explorer=', tree, 'Node=', node);
                 }
             });
             explorer.draw(data);
