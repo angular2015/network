@@ -1,6 +1,14 @@
 md-content{
     background: rgb(217, 203, 255);
 }
+/*text {
+    transform: rotate(-90deg);
+}
+#explorer{
+    transform: rotate(90deg);
+    position: relative;
+    top: -345px;
+}*/
 .margin-center{
     margin:0 auto;
 }
