@@ -27,14 +27,14 @@ body{
     border: 1pt solid rgb(224, 224, 224);
 }
 .btn-blue{
-        color: white!important;
-        background-color: rgb(140, 140, 232) !important;
+    color: white!important;
+    background-color: rgb(140, 140, 232) !important;
 }
 .text-grey{
     color: #656565 !important;
 }
 .menu-blue{
-        background-color: rgb(54, 54, 144);
+    background-color: rgb(54, 54, 144);
 }
 .text-white{
     color:white;
@@ -56,3 +56,65 @@ body{
 .pull-right{
     float: right;
 }
+
+/*slider css*/
+.main-shell {
+    position: relative;
+    width:300px;
+    margin:100px;
+
+}
+.main-shell ul{
+    padding:0;
+    margin:0;
+    width:10000px;  
+
+}
+.main-shell ul li {
+    list-style:none;
+    display:inline-block;
+
+}
+.view-window {
+    overflow: hidden;
+    position:relative;
+}
+
+.full-size-list{
+    position:relative;
+    transition:  left .8s ease;
+}
+.bullets {
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    width: 30%;
+    ul li {
+        border-radius:10px;
+        width:20px;
+        height: 20px;
+        background: #fff;
+        text-align: center;
+        margin-left: 0.3em;
+        cursor:pointer;
+        a {
+            color:#333;
+            &:hover {
+                text-decoration:none;
+            }
+
+        }
+    }
+}
+.bullets ul li.active {
+    background: #000;
+    a {
+        color:#fff;
+    }
+}
+
+
+
+
