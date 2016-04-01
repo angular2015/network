@@ -1,41 +1,56 @@
 <md-menu-bar class="menu-blue">
     <md-menu>
-        <button ui-sref="app.home" class="text-white">
+        <button ui-sref="app.main" class="text-white">
             HOME
         </button>
         <md-menu-content>
         </md-menu-content>
     </md-menu>
+    <md-menu ng-if="login">
+        <button ui-sref="app.home" class="text-white" >
+            GRAPH
+        </button>
+        <md-menu-content>
+        </md-menu-content>
+    </md-menu>
     <md-menu>
-        <button ng-click="" class="text-white">
+        <button  class="text-white">
             PLAN
         </button>
         <md-menu-content>
         </md-menu-content>
     </md-menu>
     <md-menu>
-        <button ng-click="" class="text-white">
+        <button  class="text-white">
             CONTACT
         </button>
         <md-menu-content>
         </md-menu-content>
     </md-menu>
-    <md-menu class="pull-right" ng-hide="true">
-        <button ui-sref="app.register"  class="text-white">
+   
+    <md-menu class="pull-right" ng-if="!login">
+        <button ui-sref="app.register" class="text-white">
             REGISTER
         </button>
         <md-menu-content>
         </md-menu-content>
     </md-menu>
-    <md-menu class="pull-right" ng-hide="true">
+    <md-menu class="pull-right" ng-if="!login">
         <button ui-sref="app.login" class="text-white">
             LOGIN
         </button>
         <md-menu-content>
         </md-menu-content>
     </md-menu>
-    <md-menu class="pull-right" ng-show="false">
-        <button ui-sref="app.profile" class="text-white">
+    <md-menu class="pull-right" ng-if="login">
+        <button ng-click="logout()" class="text-white">
+            LOGOUT
+        </button>
+        <md-menu-content>
+        </md-menu-content>
+    </md-menu>
+    <md-menu ng-if="login">
+        <button ui-sref="app.profile" class="text-white" >
             PROFILE
         </button>
         <md-menu-content>

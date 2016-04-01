@@ -1,8 +1,8 @@
 
-angular.module('networking', ['ngMaterial', 'ui.router', 'networking.login', 'networking.menu']);
+angular.module('networking', ['ngMaterial', 'ui.router', 'ngStorage', 'networking.login', 'networking.menu']);
 
 angular.module('networking').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/arvm/login');
+        $urlRouterProvider.otherwise('/arvm/main');
         $stateProvider
                 .state('app', {
                     url: '/arvm',
@@ -29,9 +29,16 @@ angular.module('networking').config(['$stateProvider', '$urlRouterProvider', fun
                     url: '/home',
                     templateUrl: 'main/home/templates/home.html',
                     controller: 'HomeCtrl'
+                })
+                .state('app.main', {
+                    url: '/main',
+                    templateUrl: 'main/main_page/templates/main.html',
+                    controller: 'mainCtrl'
                 });
+        ;
 
     }]);
-angular.module('networking').run([function () {
+angular.module('networking').run(['timeStorage',function (timeStorage) {
+        console.log(timeStorage.get('login'));
         console.log('run');
     }]);

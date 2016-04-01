@@ -1,0 +1,24 @@
+<div ng-controller="MenuCtrl" ng-include="'main/menu/templates/menu.html'"></div>
+<md-content layout-padding>
+<h1 class="header">ARVM <small class="caption">A real value money</small> </h1>
+
+  <div class="main-shell clearfix">
+    <div class="view-window" ng-mouseenter="stopAutoSlide()" ng-mouseleave="startAutoSlide()">
+        <ul class="full-size-list list-unstyled" ng-style="listPosition" >
+            <li ng-repeat="image in galleryData track by $index">
+                <a href=""><img ng-src="{{image}}" class="img-responsive"/></a>
+            </li>
+        </ul>
+    </div>
+    <div class="bullets clearfix">
+        <ul>
+            <li ng-repeat="image in galleryData track by $index" ng-class="{active: selected == image}">
+                    <a ng-href="" ng-click="scrollTo(image,$index)">
+                        {{$index}}
+                    </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</md-content>
