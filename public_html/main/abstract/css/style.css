@@ -18,10 +18,10 @@ md-content{
     background: rgb(217, 203, 255);
 }
 div#explorer {
-     transform: rotate(90deg)/*translateX(200px)*/;
-     position: relative;
-     left: 0pt;
-     top: -140pt;
+    transform: rotate(90deg)/*translateX(200px)*/;
+    position: relative;
+    left: 0pt;
+    top: -140pt;
 }
 
 div#explorer {}
@@ -41,8 +41,8 @@ md-input-container{
     margin: 3pt 0;
 }
 body{
-    background: rgb(217, 203, 255);
-    height: 1200px;
+    background: rgb(217, 203, 255); 
+    /*height: 1200px;*/
 }
 .form-common{
     width:200pt;
@@ -86,22 +86,25 @@ body{
 /*slider css*/
 .main-shell {
     position: relative;
-    width:300px;
-    margin:100px;
+    width: 100%;
+    /* margin:100px; */
 }
 .main-shell ul{
     padding:0;
     margin:0;
-    width: 900px;
+    width: 100000px;
 }
 .main-shell ul li {
     list-style:none;
     display:inline-block;
-
+    width: 800px;
+    /* margin-right: 400px; */
 }
 .view-window {
     overflow: hidden;
     position:relative;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .full-size-list{
@@ -142,3 +145,60 @@ body{
     padding:16px;
 }
 
+.sliImg{
+    float: left;
+    margin-right: 65px;
+}
+.sliText{
+    font-size: 22px;
+}
+.middle {
+    /* margin-top: 58px; */
+    width: 70%;
+    margin: 0 auto;
+}
+.content {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.heading {
+    margin-top: 30px;
+    font-size: 30px;
+}
+md-toolbar:not(.md-menu-toolbar) {
+    background-color: rgb(54, 54, 144);
+    color: rgba(255,255,255,0.87);
+}
+
+.bitree {
+    text-align:center;
+    margin:0;
+    padding:5px;
+    list-style-type:none;
+}
+.bileaf {
+    list-style-type:none;
+    float:left;
+    width:auto;
+    display:block;
+    border-top: solid 1px rgb(140,158,255);
+    margin: 3px;
+    text-align:center;
+    font-size: 12px;
+}
+.earning{
+    margin-top:20px;
+    text-align: center;
+}
+td {
+    font-size: 22px;
+    /* margin: 43px 0 0 0; */
+    padding: 14px 66px 0 0;
+}
+tr {
+    text-align: center;
+}
+.tb {
+    text-align: center;
+    margin-left: 25%;
+}

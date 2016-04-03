@@ -3,12 +3,12 @@
     angular.module('networking').controller('mainCtrl', ['$scope','$interval', function ($scope,$interval) {
             console.log('main scope');
             $scope.galleryData = [
-                'http://placehold.it/300x300&text=1',
-                'http://placehold.it/300x300&text=2',
-                'http://placehold.it/300x300&text=3'
+                'img/a.png',
+                'img/b.png',
+                'img/c.png'
             ];
             $scope.selected = $scope.galleryData[0];
-            var IMG_WIDTH = 300;
+            var IMG_WIDTH = 801;
             $scope.scrollTo = function (image, ind) {
                 $scope.listPosition = {left: (IMG_WIDTH * ind * -1) + "px"};
                 $scope.selected = image;
@@ -23,7 +23,7 @@
                     i++;
 
                 }
-            }
+            };
             var autoSlideInterval = $interval(autoSlide, 2000);
 
             $scope.startAutoSlide = function () {
