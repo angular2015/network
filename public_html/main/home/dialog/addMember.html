@@ -1,12 +1,31 @@
-<md-dialog aria-label="List dialog">
+<md-dialog aria-label="List dialog" class="padding-16">
     <md-dialog-content>
-        <md-list>
-            <md-list-item ng-repeat="item in items">
-                <p>Number {{item}}</p>
-            </md-list-item>
-        </md-list>
+        <md-input-container>
+            <label>User Name</label>
+            <input name="favoriteColor" ng-model="member.username" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <br>
+        <md-input-container>
+            <label>Mobile</label>
+            <input name="favoriteColor"  ng-model="member.mobile" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+        <br>
+        <md-input-container>
+            <label>Email</label>
+            <input name="favoriteColor"  ng-model="member.email" required>
+            <div ng-messages="userForm.lastName.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
     </md-dialog-content>
     <md-dialog-actions>
-        <md-button ng-click="closeDialog()" class="md-primary">Close Dialog</md-button>
+        <md-button class="md-raised btn-blue" ng-click="createMember(member)">Create</md-button>
+        <md-button ng-click="closeDialog()" class="md-primary">Cancel</md-button>
     </md-dialog-actions>
 </md-dialog>

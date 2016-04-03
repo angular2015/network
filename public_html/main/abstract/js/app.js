@@ -34,11 +34,16 @@ angular.module('networking').config(['$stateProvider', '$urlRouterProvider', fun
                     url: '/main',
                     templateUrl: 'main/main_page/templates/main.html',
                     controller: 'mainCtrl'
+                })
+                .state('app.profile', {
+                    url: '/profile/:user',
+                    templateUrl: 'main/profile/templates/profile.html',
+                    controller: 'profileCtrl'
                 });
         ;
 
     }]);
-angular.module('networking').run(['timeStorage',function (timeStorage) {
+angular.module('networking').run(['timeStorage', function (timeStorage) {
         console.log(timeStorage.get('login'));
         console.log('run');
     }]);

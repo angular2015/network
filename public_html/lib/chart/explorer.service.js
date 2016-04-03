@@ -3,7 +3,7 @@
     angular.module('networking')
             .factory('Explorer', exploreCtrl)
             .factory('exploreGraph', data);
-    function data($http, Explorer,$rootScope) {
+    function data($http, Explorer, $rootScope) {
         var data = {};
 
         data.data = function (id) {
@@ -21,7 +21,12 @@
                 },
                 actionCallback: function (action, tree, node) {
                     console.log(action);
-                    $rootScope.$emit('action',action);
+                    var data = {
+                        action: action,
+                        tree: tree,
+                        node: node
+                    }
+                    $rootScope.$emit('action', data);
 //                    console.log('[Callback] Action "' + action + '" performed: ', 'Explorer=', tree, 'Node=', node);
                 }
             });
@@ -29,7 +34,7 @@
 
             elem.addEventListener('action', function (evt) {
                 var data = evt.data;
-                console.log('[HTMLElement bind] Action "' + data.action + '" performed: ', 'Explorer=', data.treeContext, 'Node=', data.nodeContext);
+//                console.log('[HTMLElement bind] Action "' + data.action + '" performed: ', 'Explorer=', data.treeContext, 'Node=', data.nodeContext);
             });
 
 

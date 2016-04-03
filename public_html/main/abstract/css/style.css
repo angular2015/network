@@ -1,6 +1,31 @@
+
+* {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+text {
+    transform: rotate(-90deg)translate(0px,-20px);
+    padding:5px;
+    text-anchor: end;
+}
+
+#explorer{
+    width: 1000px;
+    height: 100%;
+}
 md-content{
     background: rgb(217, 203, 255);
 }
+div#explorer {
+     transform: rotate(90deg)/*translateX(200px)*/;
+     position: relative;
+     left: 0pt;
+     top: -140pt;
+}
+
+div#explorer {}
+
 /*text {
     transform: rotate(-90deg);
 }
@@ -17,6 +42,7 @@ md-input-container{
 }
 body{
     background: rgb(217, 203, 255);
+    height: 1200px;
 }
 .form-common{
     width:200pt;
@@ -62,13 +88,11 @@ body{
     position: relative;
     width:300px;
     margin:100px;
-
 }
 .main-shell ul{
     padding:0;
     margin:0;
-    width:10000px;  
-
+    width: 900px;
 }
 .main-shell ul li {
     list-style:none;
@@ -114,7 +138,7 @@ body{
         color:#fff;
     }
 }
-
-
-
+.padding-16{
+    padding:16px;
+}
 
