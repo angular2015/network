@@ -8,7 +8,7 @@
 
         data.data = function (id) {
 
-            return  $http.get('main/home/js/data.json');
+            return  $http.get('http://localhost/networking/public_html/main/api/tree.php');
         };
         data.create = function (data) {
             var elem = document.getElementById('explorer');

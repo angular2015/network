@@ -4,24 +4,78 @@
             .factory('graphInit', graphInit)
             .controller('HomeCtrl', ['$rootScope', 'exploreGraph', 'graphInit', '$timeout', '$mdDialog', '$scope', '$state',
                 function ($rootScope, exploreGraph, graphInit, $timeout, $mdDialog, $scope, $state) {
-                   $scope.treeLevel='';
+                    $scope.treeLevel = '';
                     var promise = exploreGraph.data();
                     promise.then(function (data) {
-                        console.log(data.data);
-                        var graphData = graphInit.init(data.data);
-                        console.log(graphData);
-                        $timeout(function () {
-                            $scope.treeLevel = graphData.treeLevel;
-                            console.log($scope.treeLevel);
-                            exploreGraph.create(graphData.data[0]);
-                        }, 1000);
+//                        console.log(data.data);
+                        var treeData = [];
+                        var userdata = data.data;
+                        function node(treeData, user, user_id) {
+                            for (var i = 0; i < treeData.length; i++)
+                            {
+                                if (treeData[i].user_id == user_id)
+                                {
+                                    treeData[i]['objectives'].push(user);
+                                }
+                                else 
+                                {
+                                      node(treeData[i], user, user_id);
+                                }
+                            }
+                        }
+                        ;
+                        function nodeCreate(parent_id)
+                        {
+                            for (var i = 0; i < userdata.length; i++)
+                            {
+                                if (userdata[i].parent_id == parent_id)
+                                {
+                                    node(treeData, userdata[i], parent_id);
+                                }
+                            }
+                        }
+                        for (var i = 0; i < userdata.length; i++)
+                        {
+                            userdata[i].objectives = [];
+                        }
+                        treeData.push(userdata[0]);
+                        nodeCreate(userdata[0].user_id)
+
+
+                        console.log(treeData);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                        var graphData = graphInit.init(data.data);
+//                        console.log(graphData);
+//                        $timeout(function () {
+//                            $scope.treeLevel = graphData.treeLevel;
+//                            console.log($scope.treeLevel);
+//                            exploreGraph.create(graphData.data[0]);
+//                        }, 1000);
                     });
                     $rootScope.$on('action', function (ev, data) {
                         console.log(data);
                         if (data.action == 'Add')
                             $scope.showDialog();
                         if (data.action == 'about')
-                            $state.go('app.profile',{user:data.node.user_id});
+                            $state.go('app.profile', {user: data.node.user_id});
                     })
 
 
@@ -117,7 +171,7 @@
 
             if ($localStorage.treeLevel < data[i].tree_level)
                 $localStorage.treeLevel = data[i].tree_level;
-          
+
             var maindata =
                     {
                         data: data,

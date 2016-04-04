@@ -1,4 +1,5 @@
 <?php
+ header('Access-Control-Allow-Origin: *');  
 
 $conn = mysql_connect("localhost", "root", "root") or die("server not available");
 
