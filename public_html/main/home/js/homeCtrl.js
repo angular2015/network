@@ -7,68 +7,14 @@
                     $scope.treeLevel = '';
                     var promise = exploreGraph.data();
                     promise.then(function (data) {
-//                        console.log(data.data);
-                        var treeData = [];
-                        var userdata = data.data;
-                        function node(treeData, user, user_id) {
-                            for (var i = 0; i < treeData.length; i++)
-                            {
-                                if (treeData[i].user_id == user_id)
-                                {
-                                    treeData[i]['objectives'].push(user);
-                                }
-                                else 
-                                {
-                                      node(treeData[i], user, user_id);
-                                }
-                            }
-                        }
-                        ;
-                        function nodeCreate(parent_id)
-                        {
-                            for (var i = 0; i < userdata.length; i++)
-                            {
-                                if (userdata[i].parent_id == parent_id)
-                                {
-                                    node(treeData, userdata[i], parent_id);
-                                }
-                            }
-                        }
-                        for (var i = 0; i < userdata.length; i++)
-                        {
-                            userdata[i].objectives = [];
-                        }
-                        treeData.push(userdata[0]);
-                        nodeCreate(userdata[0].user_id)
-
-
-                        console.log(treeData);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//                        var graphData = graphInit.init(data.data);
-//                        console.log(graphData);
-//                        $timeout(function () {
-//                            $scope.treeLevel = graphData.treeLevel;
-//                            console.log($scope.treeLevel);
-//                            exploreGraph.create(graphData.data[0]);
-//                        }, 1000);
+    console.log(data.data);
+                        var graphData = graphInit.init([data.data]);
+                        console.log(graphData);
+                        $timeout(function () {
+                            $scope.treeLevel = graphData.treeLevel;
+                            console.log($scope.treeLevel);
+                            exploreGraph.create(graphData.data[0]);
+                        }, 1000);
                     });
                     $rootScope.$on('action', function (ev, data) {
                         console.log(data);
@@ -109,80 +55,80 @@
                     }
                 }]);
 
-    function graphInit($localStorage) {
-        var graph = {};
-        graph.init = function (data, i) {
-            var viewinfo = {
-                "color": "#26334b",
-                "label": "",
-                "hint": "",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "Add",
-                        "name": "Add Member"
-                    },
-                    {
-                        "id": "about",
-                        "name": "about"
-                    }
-                ]
-            };
-            var viewinfoabout = {
-                "color": "#26334b",
-                "label": "",
-                "hint": "",
-                "shape": "square",
-                "actions": [
-                    {
-                        "id": "about",
-                        "name": "about"
-                    }
-                ]
-            };
-            if (!i)
-                i = 0;
-            if (data[i].status == 0)
-            {
-                data[i].viewinfo = viewinfoabout;
-            } else
-                data[i].viewinfo = viewinfo;
-
-            if (data[i].objectives)
-            {
-
-                if (data[i].objectives.length == 2)
-                {
-
-                    data[i].viewinfo = viewinfoabout;
-                }
-
-                if (data[i].objectives.length)
-                {
-
-                    for (var j = 0; j < data[i].objectives.length; j++)
-                    {
-                        graph.init(data[i].objectives, j);
-                    }
-                }
-            }
-            data[i].viewinfo.label = data[i].display_name;
-            data[i].viewinfo.hint = data[i].user_name;
-
-            if ($localStorage.treeLevel < data[i].tree_level)
-                $localStorage.treeLevel = data[i].tree_level;
-
-            var maindata =
-                    {
-                        data: data,
-                        treeLevel: $localStorage.treeLevel
+            function graphInit($localStorage) {
+                var graph = {};
+                graph.init = function (data, i) {
+                    var viewinfo = {
+                        "color": "#26334b",
+                        "label": "",
+                        "hint": "",
+                        "shape": "square",
+                        "actions": [
+                            {
+                                "id": "Add",
+                                "name": "Add Member"
+                            },
+                            {
+                                "id": "about",
+                                "name": "about"
+                            }
+                        ]
                     };
-            return maindata;
-        };
-        return graph;
-    }
-    ;
-})();
+                    var viewinfoabout = {
+                        "color": "#26334b",
+                        "label": "",
+                        "hint": "",
+                        "shape": "square",
+                        "actions": [
+                            {
+                                "id": "about",
+                                "name": "about"
+                            }
+                        ]
+                    };
+                    if (!i)
+                        i = 0;
+                    if (data[i].status == 0)
+                    {
+                        data[i].viewinfo = viewinfoabout;
+                    } else
+                        data[i].viewinfo = viewinfo;
+
+                    if (data[i].objectives)
+                    {
+
+                        if (data[i].objectives.length == 2)
+                        {
+
+                            data[i].viewinfo = viewinfoabout;
+                        }
+
+                        if (data[i].objectives.length)
+                        {
+
+                            for (var j = 0; j < data[i].objectives.length; j++)
+                            {
+                                graph.init(data[i].objectives, j);
+                            }
+                        }
+                    }
+                    data[i].viewinfo.label = data[i].display_name;
+                    data[i].viewinfo.hint = data[i].user_name;
+
+                    if ($localStorage.treeLevel < data[i].tree_level)
+                        $localStorage.treeLevel = data[i].tree_level;
+
+                    var maindata =
+                            {
+                                data: data,
+                                treeLevel: $localStorage.treeLevel
+                            };
+                    return maindata;
+                };
+                return graph;
+            }
+            ;
+        })();
 // "viewinfo": {
 //                                "color": "#26334b",
 //                                "label": "shashank",

@@ -21,7 +21,7 @@ div#explorer {
     transform: rotate(90deg)/*translateX(200px)*/;
     position: relative;
     left: 0pt;
-    top: -140pt;
+    top: 100pt;
 }
 
 div#explorer {}
