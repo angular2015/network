@@ -1,0 +1,41 @@
+<div ng-controller="MenuCtrl" ng-include="'main/menu/templates/menu.html'"></div>
+<md-content layout-padding>
+    <h1 class="header">ARVM <small class="caption">A real value money</small> </h1>
+
+    <form name="colorForm" class="margin-center form-common" novalidate ng-submit="Submit(user)">
+        <div class="contactus">Contact Us</div>
+        <div class="contacttext"> Do you want earn money? We can help you.
+            fill out the contact form here. We will answer you within 24 hours.</div>
+        <div class="conMiddle">
+            <md-input-container>
+                <label>User Name</label>
+                <input name="favoriteColor" ng-model="user.username" required>
+                <div ng-messages="userForm.lastName.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Email</label>
+                <input name="favoriteColor" ng-model="user.email" required>
+                <div ng-messages="userForm.lastName.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Mobile No</label>
+                <input name="favoriteColor" type="password" ng-model="user.mobile" required>
+                <div ng-messages="userForm.lastName.$error">
+                    <div ng-message="required">This is required!</div>
+                </div>
+            </md-input-container>
+            <br>
+        <md-button class="md-raised btn-submit btn-blue" type="submit" ng-disabled="colorForm.$invalid">Send Your Message</md-button>
+        </div>
+        
+
+
+
+    </form>
+
+</md-content>

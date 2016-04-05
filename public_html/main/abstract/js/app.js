@@ -39,7 +39,11 @@ angular.module('networking').config(['$stateProvider', '$urlRouterProvider', fun
                     url: '/profile/:user',
                     templateUrl: 'main/profile/templates/profile.html',
                     controller: 'profileCtrl'
-                });
+                }).state('app.contact', {
+                    url: '/app/contact',
+                    templateUrl: 'main/contact_us/templates/contact_us.html',
+                    controller: 'profileCtrl'
+                })
         ;
 
     }]);

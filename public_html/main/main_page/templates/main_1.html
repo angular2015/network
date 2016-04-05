@@ -1,0 +1,197 @@
+
+
+<div ng-controller="MenuCtrl" ng-include="'main/menu/templates/menu.html'"></div>
+<md-content layout-padding style="overflow-x: hidden">
+    <h1 class="header">ARVM <small class="caption">A real value money</small> </h1>
+
+    <div class="main-shell clearfix">
+        <div class="view-window" ng-mouseenter="stopAutoSlide()" ng-mouseleave="startAutoSlide()">
+            <ul class="full-size-list list-unstyled" ng-style="listPosition" >
+                <li ng-repeat="image in galleryData track by $index">
+                    <a href="" class="sliImg"><img ng-src="{{image}}" class="img-responsive"/></a>
+                    <span class="sliText">
+                        Way to earn money with which you can earn a good amount of money and can fulfill your wishes. Enjoy!    
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="bullets clearfix">
+            <ul>
+                <li ng-repeat="image in galleryData track by $index" ng-class="{active: selected == image}">
+                    <!--                    <a ng-href="" ng-click="scrollTo(image,$index)">
+                                            {{$index}}
+                                        </a>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="row">
+            <div class="heading">About</div>
+            <div class="content">
+                This is easiest way to earn money.
+                Firstly You need to be member of ARVM.<br>
+                You can get membership by just rupee 251.<br>
+            </div>
+            <div class="heading">How To Earn</div>
+            <div class="content">
+                For earning You need to add a member and when you add two member one in your left and right side.
+                You will get 5% amount of your below members and when they add member you will also earn 5% of those members.
+                this is channing process here you can earn easily.<br>
+                <div class="earning">
+                    <div class="bileaf">
+                        251 
+                        <ul class="bitree">
+                            1    <li class="bileaf">
+                                251 
+                                <ul class="bitree">
+
+                                    <li class="bileaf">251 
+                                        <ul class="bitree">
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li class="bileaf">
+                                        251
+                                        <ul class="bitree">
+
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>                
+                                </ul>
+                            </li>
+                            <li class="bileaf">
+                                251
+                                <ul class="bitree">
+                                    2
+                                    <li class="bileaf">251
+                                        <ul class="bitree">
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li class="bileaf">
+                                        251
+                                        <ul class="bitree">
+                                            3
+                                            <li class="bileaf">251
+                                                <ul class="bitree">
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                            <li class="bileaf">251
+
+                                                <ul class="bitree">
+                                                    4
+                                                    <li class="bileaf">251</li>
+                                                    <li class="bileaf">251</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>                
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+                </div>
+                <div style="clear:both"></div>
+                <div class="tb">
+                    <table>
+                        <th>
+                        <tr>
+                            <td>
+                                level
+                            </td>
+                            <td>
+                                earning
+                            </td>
+                            <td>
+                                total earning
+                            </td>
+                        </tr></th>
+
+                        <tr>
+                            <td>1</td><td>50</td><td>50</td>
+
+                        </tr>
+                        <tr>
+                            <td>2</td><td>100</td><td>150</td>
+
+                        </tr>
+                        <tr>
+                            <td>3</td><td>200</td><td>350</td>
+
+                        </tr>
+                        <tr>
+                            <td>4</td><td>400</td><td>750</td>
+
+                        </tr>
+                        <tr>
+                            <td>5</td><td>500</td><td>1250</td>
+
+                        </tr>
+                        <tr>
+                            <td>6</td><td>500</td><td>1750</td>
+
+                        </tr>
+                        <tr>
+                            <td>7</td><td>500</td><td>2250</td>
+
+                        </tr>
+                    </table>
+                    
+                    <span style="padding-top:15px"> *After 4 level YOu will earn 500 on per level.</span>
+                    <div style="clear:both"></div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+        <!--    <div class="row">
+                
+            </div>-->
+    </div>
+
+</md-content>
+<md-toolbar class="md-medium-tall">
+    <div layout="row" layout-align="center center" flex>
+        <span></span>
+    </div>
+</md-toolbar>
